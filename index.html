@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OFFSCRIPT® — Future looks good on you</title>
+<meta name="description" content="OFFSCRIPT® Archive 001. Y2K future fashion. Demo storefront.">
+<meta name="theme-color" content="#FAF8FF">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Serif:ital@1&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="frontend/style.css">
+</head>
+<body>
+<a class="skip" href="#shop">Skip to products</a>
+
+<!-- Navbar -->
+<header id="header">
+  <a class="logo" href="#top">OFFSCRIPT<sup>®</sup></a>
+  <nav id="menu" aria-label="Main">
+    <a href="#shop">Shop</a><a href="#timeline">Collections</a><a href="#editorial">Editorial</a><a href="#about">About</a>
+  </nav>
+  <div class="tools">
+    <button id="btn-search">Search</button>
+    <button id="btn-wish">Wishlist <span class="count" id="wish-count">0</span></button>
+    <button id="btn-cart">Bag <span class="count" id="cart-count">0</span></button>
+    <button id="btn-menu" aria-expanded="false" aria-controls="menu">Menu</button>
+  </div>
+</header>
+
+<main>
+  <!-- HeroSection -->
+  <section class="hero" id="top">
+    <div class="orb o1" data-parallax=".12"></div><div class="orb o2" data-parallax="-.08"></div><div class="orb o3" data-parallax=".05"></div>
+    <div class="arch"><img id="hero-img" alt="OFFSCRIPT campaign photo"></div>
+    <span class="star s1">✦</span><span class="star s2">✦</span>
+    <div class="sticker" aria-hidden="true">NEW<br>DROP<br>✦</div>
+    <p class="cap hero-cap">OFFSCRIPT ARCHIVE 001 <b>SEASON: SS—2003.∞</b></p>
+    <h1 class="hero-h" aria-label="Future looks good on you.">
+      <span class="ln"><span>FUTURE</span></span>
+      <span class="ln"><span>LOOKS <em>good</em></span></span>
+      <span class="ln"><span class="chrome">ON YOU.</span></span>
+    </h1>
+    <div class="hero-copy">
+      <p>DRESS LIKE TOMORROW DOESN'T EXIST.</p>
+      <div class="hero-btns"><a class="btn" href="#shop" data-magnet>EXPLORE THE DROP <i>↗</i></a><a class="link" href="#editorial">DISCOVER OFFSCRIPT</a></div>
+    </div>
+    <a class="scroll" href="#ticker" aria-label="Scroll down">SCROLL ↓</a>
+  </section>
+
+  <div class="ticker" id="ticker" aria-hidden="true"><div class="track" id="track"></div></div>
+
+  <!-- ProductGrid -->
+  <section id="shop" aria-labelledby="shop-h">
+    <p class="cap" data-reveal>THE DIGITAL CLOSET / ARCHIVE 001</p>
+    <h2 class="big" id="shop-h" data-reveal><span class="ln"><span>THE DIGITAL</span></span><span class="ln"><span class="chrome">CLOSET.</span></span></h2>
+    <div class="filters" id="filters" role="group" aria-label="Category"></div>
+    <div class="bar">
+      <label class="search">Search <input id="q" type="search" placeholder="Tee, denim, bag…" autocomplete="off"></label>
+      <label>Sort
+        <select id="sort"><option value="featured">Featured</option><option value="newest">Newest</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option></select>
+      </label>
+      <p id="result-count" aria-live="polite"></p>
+    </div>
+    <div id="grid" class="grid"></div>
+    <div id="grid-state" class="state" hidden></div>
+  </section>
+
+  <!-- Signature: Choose your timeline -->
+  <section id="timeline" class="tl" aria-labelledby="tl-h">
+    <p class="cap">COLLECTIONS / 4 TIMELINES</p>
+    <h2 class="big" id="tl-h">CHOOSE YOUR<br><em>timeline.</em></h2>
+    <div class="tl-grid">
+      <div class="tl-tabs" id="tl-tabs" role="radiogroup" aria-label="Choose a timeline"></div>
+      <div class="tl-stage">
+        <div class="tl-frame"><img id="tl-img" alt=""><span class="orb o4"></span><span class="star s3">✦</span></div>
+        <div class="tl-text" aria-live="polite"><h3 id="tl-name"></h3><p id="tl-desc"></p><p class="cap" id="tl-picks"></p><a class="btn" href="#shop" data-magnet>SEE THE PIECES <i>↗</i></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editorial -->
+  <section id="editorial" class="edit" aria-labelledby="ed-h">
+    <p class="ghost" aria-hidden="true" data-px=".12">FUTURE FUTURE</p>
+    <div class="edit-grid">
+      <div class="ed-main frame clip" data-reveal><img id="ed-img" data-parallax=".05" alt="OFFSCRIPT editorial photo: two models against a graffiti wall"><span class="cap tape">FIG.01 — DIRECT FLASH, 2003</span></div>
+      <div class="ed-copy">
+        <p class="cap" data-reveal>EDITORIAL / ISSUE 001</p>
+        <h2 class="big" id="ed-h" data-reveal><span class="ln"><span>NOT FROM</span></span><span class="ln"><span class="chrome">THIS ERA.</span></span></h2>
+        <p data-reveal id="about">OFFSCRIPT® is a fashion label that dresses for a future that hasn't been invented yet. We skip the trend cycle: chrome, denim and glossy cuts made for self-expression, not approval. Wear what you imagine, not what's expected.</p>
+      </div>
+      <div class="ed-small s-a frame clip" data-reveal><img id="ed-img2" alt="OFFSCRIPT editorial photo: duo in sunglasses and red"><span class="cap tape">FIG.02</span></div>
+      <div class="ed-small s-b frame clip" data-reveal><img id="ed-img3" alt="OFFSCRIPT editorial photo: the crew in baggy denim"><span class="cap tape">FIG.03</span></div>
+      <div class="sticker alt" aria-hidden="true">100%<br>FUTURE</div>
+      <span class="orb o5" data-parallax=".1"></span><span class="orb o6" data-parallax="-.07"></span><span class="star s4">✦</span><span class="star s5">✦</span>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="foot-top">
+    <div><p class="cap">DIGITAL FASHION DEPARTMENT</p><h2 class="big">GET ON THE <em>list.</em></h2></div>
+    <form id="news-form" novalidate>
+      <label for="news-email">Email address (frontend demo: nothing is subscribed)</label>
+      <div class="row"><input id="news-email" type="email" data-validate="email" autocomplete="email" placeholder="you@email.com"><button class="btn" type="submit" data-magnet>JOIN <i>↗</i></button></div>
+      <p class="err" id="news-email-err" role="alert"></p><p class="ok" id="news-ok" role="status"></p>
+    </form>
+  </div>
+  <div class="foot-grid">
+    <div><h3>Shop</h3><a href="#shop">All pieces</a><a href="#timeline">Collections</a></div>
+    <div><h3>Label</h3><a href="#about">About</a><a href="mailto:hello@offscript.example">Contact</a></div>
+    <div><h3>Follow</h3><a href="https://instagram.com" rel="noopener" target="_blank">Instagram</a><a href="https://tiktok.com" rel="noopener" target="_blank">TikTok</a></div>
+    <div><h3>Legal</h3><a href="#" data-soon>Privacy</a><a href="#" data-soon>Terms</a></div>
+  </div>
+  <p class="foot-bar">© 2026 OFFSCRIPT®. Demo storefront: no real orders or payments.</p>
+</footer>
+
+<button id="to-top" aria-label="Back to top">↑</button>
+<div id="overlay"></div>
+
+<!-- CartDrawer -->
+<aside id="cart-drawer" class="panel drawer" aria-label="Shopping bag" aria-hidden="true">
+  <div class="drawer-head"><h2>YOUR BAG</h2><button class="close" data-close aria-label="Close bag">Close</button></div>
+  <div id="cart-items" class="drawer-body"></div>
+  <div class="drawer-foot">
+    <p class="total">Subtotal <strong id="cart-total">₹0</strong></p>
+    <button class="btn" id="checkout">DEMO CHECKOUT <i>↗</i></button>
+    <p id="checkout-note" role="status" class="note">Demo only: no order is created, no payment is taken.</p>
+  </div>
+</aside>
+
+<!-- WishlistView -->
+<aside id="wish-drawer" class="panel drawer" aria-label="Wishlist" aria-hidden="true">
+  <div class="drawer-head"><h2>WISHLIST</h2><button class="close" data-close aria-label="Close wishlist">Close</button></div>
+  <div id="wish-items" class="drawer-body"></div>
+</aside>
+
+<!-- Quick view -->
+<dialog id="product-dlg" aria-label="Quick view">
+  <button class="close" data-dclose aria-label="Close quick view">Close</button>
+  <div id="product-body"></div>
+</dialog>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<div id="cur-dot" aria-hidden="true"></div><div id="cur-ring" aria-hidden="true"></div>
+<script src="frontend/script.js"></script>
+</body>
+</html>
