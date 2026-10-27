@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log in | OFFSCRIPT®</title>
+<meta name="description" content="Log in to your OFFSCRIPT® account. Demo storefront.">
+<meta name="theme-color" content="#FAF8FF">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Instrument+Serif:ital@1&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="frontend/auth.css">
+</head>
+<body class="auth">
+<a class="skip" href="#login-form">Skip to form</a>
+
+<div class="auth-wrap">
+  <aside class="auth-brand">
+    <a class="auth-logo" href="index.html" aria-label="OFFSCRIPT home">OFFSCRIPT<sup>®</sup></a>
+    <span class="auth-orb o1" aria-hidden="true"></span><span class="auth-orb o2" aria-hidden="true"></span>
+    <span class="auth-star s1" aria-hidden="true">✦</span><span class="auth-star s2" aria-hidden="true">✦</span>
+    <p class="auth-hero" aria-hidden="true"><span class="ln">Back in</span><span class="ln"><em>the</em> future</span><span class="ln chrome">on you.</span></p>
+    <p class="auth-note">Save your bag, keep your wishlist, check out faster.</p>
+    <div class="auth-sticker" aria-hidden="true">WELCOME<br>BACK<br>✦</div>
+  </aside>
+
+  <section class="auth-panel">
+    <a class="auth-back" href="index.html">← Back to homepage</a>
+
+    <div class="auth-card">
+      <h1>Log in</h1>
+      <p class="auth-sub">Welcome back. Pick up where you left off.</p>
+
+      <form id="login-form" data-auth="login" novalidate>
+        <div class="field">
+          <label for="login-email">Email address</label>
+          <input id="login-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@email.com" data-rule="email" aria-describedby="login-email-err" required>
+          <p class="err" id="login-email-err" role="alert"></p>
+        </div>
+
+        <div class="field">
+          <div class="label-row">
+            <label for="login-password">Password</label>
+            <a href="#" data-soon="Password reset needs a backend, which isn’t connected yet.">Forgot password?</a>
+          </div>
+          <div class="input-wrap">
+            <input id="login-password" name="password" type="password" autocomplete="current-password" placeholder="Your password" data-rule="password-required" aria-describedby="login-password-err" required>
+            <button class="pw-toggle" type="button" data-toggle-pw aria-controls="login-password" aria-pressed="false">Show</button>
+          </div>
+          <p class="err" id="login-password-err" role="alert"></p>
+        </div>
+
+        <div class="form-row">
+          <div class="check">
+            <input id="remember" name="remember" type="checkbox">
+            <label for="remember">Remember me</label>
+          </div>
+        </div>
+
+        <button class="auth-btn" type="submit"><span>Log in</span><i aria-hidden="true">↗</i></button>
+        <p class="form-status" id="login-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <p class="auth-switch">Don't have an account? <a href="signup.html">Sign up</a></p>
+    </div>
+  </section>
+</div>
+
+<script src="frontend/auth.js"></script>
+</body>
+</html>
