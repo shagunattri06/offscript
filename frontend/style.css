@@ -184,6 +184,62 @@ nav a:hover, .tools button:hover { border-bottom-color: var(--pink); }
 .tools { display: flex; align-items: center; gap: 16px; }
 .count { display: inline-block; min-width: 26px; padding: 1px 6px; border-radius: 999px; background: var(--navy); color: var(--pearl); text-align: center; font-size: 11px; }
 
+/* Login / Sign up — matching navbar button pair */
+.tools .auth-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: 8px 15px;
+  border: 1px solid var(--navy);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.25s ease, color 0.25s ease,
+              border-color 0.25s ease, transform 0.25s ease;
+}
+
+.tools .auth-login {
+  color: var(--navy);
+  background: transparent;
+}
+
+.tools .auth-signup {
+  color: var(--pearl);
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.tools .auth-login:hover {
+  color: var(--pearl);
+  background: var(--navy);
+  border-bottom-color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.tools .auth-signup:hover {
+  color: var(--navy);
+  background: var(--silver);
+  border-color: var(--silver);
+  border-bottom-color: var(--silver);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .tools .auth-link {
+    min-height: 32px;
+    padding: 7px 11px;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+}
+
+
 #btn-menu { display: none; background: var(--navy); color: var(--pearl); border-radius: 999px; padding: 8px 16px; border-bottom: 0; }
 
 
